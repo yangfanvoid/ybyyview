@@ -28,6 +28,7 @@ export default class BasicForms extends PureComponent {
   handleSubmit = e => {
     e.preventDefault();
     this.props.form.validateFieldsAndScroll((err, values) => {
+      //alert(JSON.stringify(values["standard"]));
       if (!err) {
         this.props.dispatch({
           type: 'form/submitRegularForm',

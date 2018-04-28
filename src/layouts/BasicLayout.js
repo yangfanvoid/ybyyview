@@ -14,7 +14,7 @@ import NotFound from '../routes/Exception/404';
 import { getRoutes } from '../utils/utils';
 import Authorized from '../utils/Authorized';
 import { getMenuData } from '../common/menu';
-import logo from '../assets/logo.svg';
+import logo from '../assets/halogo.png';
 
 const { Content, Header, Footer } = Layout;
 const { AuthorizedRoute, check } = Authorized;
@@ -227,31 +227,37 @@ class BasicLayout extends React.PureComponent {
               <Route render={NotFound} />
             </Switch>
           </Content>
-          <Footer style={{ padding: 0 }}>
+          <Footer style={{ margin: 20 }}>
             <GlobalFooter
               links={[
                 {
-                  key: 'Pro 首页',
-                  title: 'Pro 首页',
-                  href: 'http://pro.ant.design',
+                  key: '',
+                  title: '跳转链接',
+                  href: '',
                   blankTarget: true,
                 },
                 {
-                  key: 'github',
-                  title: <Icon type="github" />,
-                  href: 'https://github.com/ant-design/ant-design-pro',
+                  key: 'Home Page',
+                  title: <Icon type="home" />,
+                  href: '',
                   blankTarget: true,
                 },
                 {
-                  key: 'Ant Design',
-                  title: 'Ant Design',
-                  href: 'http://ant.design',
+                  key: 'Call By Phone',
+                  title: <Icon type="customer-service" />,
+                  href: '',
+                  blankTarget: true,
+                },
+                {
+                  key: 'Bank Interface',
+                  title: <Icon type="api" />,
+                  href: '',
                   blankTarget: true,
                 },
               ]}
               copyright={
                 <Fragment>
-                  Copyright <Icon type="copyright" /> 2018 蚂蚁金服体验技术部出品
+                  <Icon type="smile-o" /> 2018 华安保险创新业务部
                 </Fragment>
               }
             />

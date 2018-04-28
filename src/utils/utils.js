@@ -159,3 +159,29 @@ const reg = /(((^https?:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-
 export function isUrl(path) {
   return reg.test(path);
 }
+
+export function getRegularCheck(param) {
+  const ruleCheck = {
+    certNo: {
+      rules: [
+        { required: true, message: '请输入证件号码' },
+        { pattern: /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/, message: '请输入合法证件号码' },
+      ],
+    },
+    cardId: {
+      rules: [
+        { required: true, message: '请输入扣款账号' },
+        { pattern: /^(\d+)((?:\.\d+)?)$/, message: '请输入合法卡号' },
+      ],
+    },
+    //允许数字横杠斜杠
+    validity: {
+      rules: [
+        { required: true, message: '请输入' },
+        { pattern: /^[\d/-]*$/, message: '请确认输入合法' },
+      ],
+    },
+  };
+
+  return ruleCheck[param];
+}

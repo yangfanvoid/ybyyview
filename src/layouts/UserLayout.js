@@ -4,32 +4,26 @@ import DocumentTitle from 'react-document-title';
 import { Icon } from 'antd';
 import GlobalFooter from '../components/GlobalFooter';
 import styles from './UserLayout.less';
-import logo from '../assets/logo.svg';
+import logo from '../assets/halogo.png';
 import { getRoutes } from '../utils/utils';
 
 const links = [
   {
     key: 'help',
-    title: '帮助',
+    title: '',
     href: '',
   },
   {
     key: 'privacy',
-    title: '隐私',
+    title: '',
     href: '',
   },
   {
     key: 'terms',
-    title: '条款',
+    title: '',
     href: '',
   },
 ];
-
-const copyright = (
-  <Fragment>
-    Copyright <Icon type="copyright" /> 2018 蚂蚁金服体验技术部出品
-  </Fragment>
-);
 
 class UserLayout extends React.PureComponent {
   getPageTitle() {
@@ -51,10 +45,10 @@ class UserLayout extends React.PureComponent {
               <div className={styles.header}>
                 <Link to="/">
                   <img alt="logo" className={styles.logo} src={logo} />
-                  <span className={styles.title}>Ant Design</span>
+                  <span className={styles.title}>电销运营系统</span>
                 </Link>
               </div>
-              <div className={styles.desc}>Ant Design 是西湖区最具影响力的 Web 设计规范</div>
+              <div className={styles.desc} />
             </div>
             <Switch>
               {getRoutes(match.path, routerData).map(item => (
@@ -68,7 +62,7 @@ class UserLayout extends React.PureComponent {
               <Redirect exact from="/user" to="/user/login" />
             </Switch>
           </div>
-          <GlobalFooter links={links} copyright={copyright} />
+          <GlobalFooter links={links} />
         </div>
       </DocumentTitle>
     );

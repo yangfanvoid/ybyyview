@@ -2,6 +2,202 @@ import { isUrl } from '../utils/utils';
 
 const menuData = [
   {
+    name: '消息管理',
+    icon: 'message',
+    path: 'message-manage',
+    children: [
+      {
+        name: '消息读取页面',
+        path: 'message-form',
+      },
+      {
+        name: '任务处理界面',
+        path: 'task-form',
+      },
+    ],
+  },
+  {
+    name: '投保管理',
+    icon: 'folder-open',
+    path: 'apply-manage',
+    children: [
+      {
+        name: '投保单查询',
+        path: 'apply-list',
+      },
+      {
+        name: '自建渠道投保',
+        path: 'selfchannel-form',
+      },
+      {
+        name: '自建渠道质检审核',
+        path: 'selfchannel-audit',
+      },
+    ],
+  },
+  {
+    name: '保单批改',
+    icon: 'edit',
+    path: 'correction',
+    children: [
+      {
+        name: '保单注退批改',
+        path: 'cancel-correction',
+      },
+      {
+        name: '非犹豫期退保退费审核',
+        path: 'cancel-audit',
+      },
+      {
+        name: '客户信息批改',
+        path: 'basic-correction',
+      },
+      {
+        name: '客户信息批改审核',
+        path: 'basic-audit',
+      },
+      {
+        name: '取消续保批改',
+        path: 'review-correction',
+      },
+      {
+        name: '转快钱批改',
+        path: 'fastmoney-correction',
+      },
+    ],
+  },
+  {
+    name: '续保管理',
+    icon: 'folder-add',
+    path: 'renewal-manage',
+    children: [
+      {
+        name: '续保查询',
+        path: 'renewal-list',
+      },
+      {
+        name: '续保情况汇总展示',
+        path: 'renewal-display',
+      },
+    ],
+  },
+  {
+    name: '请扣款管理',
+    icon: 'pay-circle-o',
+    path: 'finance-manage',
+    children: [
+      {
+        name: '请扣款清单查询',
+        path: 'finance-list',
+      },
+    ],
+  },
+  {
+    name: '查询功能',
+    icon: 'table',
+    path: 'query-manage',
+    children: [
+      {
+        name: '保单信息查询',
+        path: 'policy-query',
+      },
+      {
+        name: '保单详情页（x）',
+        path: 'policy-list',
+      },
+      {
+        name: '理赔信息查询',
+        path: 'claim-form',
+      },
+    ],
+  },
+  {
+    name: '报表功能',
+    icon: 'line-chart',
+    path: 'report-manage',
+    children: [
+      {
+        name: '整体情况汇总',
+        path: 'basic-report',
+      },
+      {
+        name: '个性报表取数',
+        path: 'free-report',
+      },
+      {
+        name: '固定报表取数',
+        authority: 'admin',
+        path: 'absolute-report',
+      },
+      {
+        name: '财务对账报表',
+        path: 'finance-report',
+      },
+    ],
+  },
+  {
+    name: '快递管理',
+    icon: 'gift',
+    path: 'express-manage',
+    children: [
+      {
+        name: '快递、回执单查询',
+        path: 'express-route',
+      },
+      {
+        name: '快递费用管理查询',
+        path: 'express-charge',
+      },
+      {
+        name: '回执单扫码入库',
+        authority: 'admin',
+        path: 'receipt-scan',
+      },
+    ],
+  },
+  {
+    name: '保单打印',
+    icon: 'printer',
+    path: 'policy-print',
+    children: [
+      {
+        name: '保单打印查询',
+        path: 'print-list',
+      },
+    ],
+  },
+  {
+    name: '销售方案管理',
+    icon: 'schedule',
+    path: 'sales-plan',
+    children: [
+      {
+        name: '添加销售方案',
+        path: 'plan-add',
+      },
+    ],
+  },
+  {
+    name: '自动任务管理',
+    icon: 'like-o',
+    path: 'quartz-manage',
+    children: [
+      {
+        name: 'job管理',
+        path: 'quartz-manage',
+      },
+      {
+        name: '自动任务列表管理',
+        path: 'quartz-list',
+      },
+      {
+        name: 'job任务配置',
+        authority: 'admin',
+        path: 'quartz-assign',
+      },
+    ],
+  },
+  {
     name: 'dashboard',
     icon: 'dashboard',
     path: 'dashboard',

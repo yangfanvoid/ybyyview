@@ -110,6 +110,17 @@ export const getRouterData = app => {
     '/list/table-list': {
       component: dynamicWrapper(app, ['rule'], () => import('../routes/List/TableList')),
     },
+    '/apply-manage/apply-list': {
+      component: dynamicWrapper(app, ['rule'], () => import('../routes/ApplyManage/ApplyList')),
+    },
+    '/correction/fastmoney-correction': {
+      component: dynamicWrapper(app, ['form'], () =>
+        import('../routes/Correction/FastmoneyCorrection')
+      ),
+    },
+    '/query-manage/policy-list': {
+      component: dynamicWrapper(app, ['rule'], () => import('../routes/QueryManage/PolicyList')),
+    },
     '/list/basic-list': {
       component: dynamicWrapper(app, ['list'], () => import('../routes/List/BasicList')),
     },

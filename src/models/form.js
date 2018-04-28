@@ -16,7 +16,8 @@ export default {
 
   effects: {
     *submitRegularForm({ payload }, { call }) {
-      yield call(fakeSubmitForm, payload);
+      const response = yield call(fakeSubmitForm, payload);
+      //console.log(JSON.stringify(response));
       message.success('提交成功');
     },
     *submitStepForm({ payload }, { call, put }) {
@@ -28,6 +29,10 @@ export default {
       yield put(routerRedux.push('/form/step-form/result'));
     },
     *submitAdvancedForm({ payload }, { call }) {
+      yield call(fakeSubmitForm, payload);
+      message.success('提交成功');
+    },
+    *submitPolicyList({ payload }, { call }) {
       yield call(fakeSubmitForm, payload);
       message.success('提交成功');
     },

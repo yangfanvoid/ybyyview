@@ -6,7 +6,7 @@ import styles from './index.less';
 export default ({
   className,
   title,
-  col = 3,
+  col = 2,
   layout = 'horizontal',
   gutter = 32,
   children,

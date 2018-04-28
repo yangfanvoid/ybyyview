@@ -48,6 +48,8 @@ const progressColumns = [
 export default class BasicProfile extends Component {
   componentDidMount() {
     const { dispatch } = this.props;
+    //console.table(this.props);
+
     dispatch({
       type: 'profile/fetchBasic',
     });
@@ -56,6 +58,7 @@ export default class BasicProfile extends Component {
   render() {
     const { profile, loading } = this.props;
     const { basicGoods, basicProgress } = profile;
+    //console.log(this.props);
     let goodsData = [];
     if (basicGoods.length) {
       let num = 0;
@@ -147,7 +150,7 @@ export default class BasicProfile extends Component {
           <DescriptionList size="large" title="退款申请" style={{ marginBottom: 32 }}>
             <Description term="取货单号">1000000000</Description>
             <Description term="状态">已取货</Description>
-            <Description term="销售单号">1234123421</Description>
+            <Description term="销售单号">999999999</Description>
             <Description term="子订单">3214321432</Description>
           </DescriptionList>
           <Divider style={{ marginBottom: 32 }} />

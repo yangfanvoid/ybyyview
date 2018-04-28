@@ -43,6 +43,8 @@ function checkStatus(response) {
  * @return {object}           An object containing either "data" or "err"
  */
 export default function request(url, options) {
+  //alert( url );
+  //alert(JSON.stringify(options));
   const defaultOptions = {
     credentials: 'include',
   };
@@ -71,6 +73,9 @@ export default function request(url, options) {
       if (newOptions.method === 'DELETE' || response.status === 204) {
         return response.text();
       }
+      //console.log(response.json());
+      //response.json().then(result => console.log(JSON.stringify(result)));
+
       return response.json();
     })
     .catch(e => {
